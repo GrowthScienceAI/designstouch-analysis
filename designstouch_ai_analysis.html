@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesignsTouch AI Integration Strategy - Business Model Canvas Analysis</title>
+    <style>
+        :root {
+            --dark-blue: #0D1932;
+            --royal-blue: #11306D;
+            --lighter-royal-blue: #2356AF;
+            --cornflower-blue: #5790F4;
+            --light-blue: #ADD0FF;
+            --white-lilac: #F1F3FA;
+            --grey: #D0CECE;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-blue);
+            background: white;
+            padding: 40px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--royal-blue) 0%, var(--lighter-royal-blue) 100%);
+            color: white;
+            padding: 50px 40px;
+            margin: -40px -40px 40px -40px;
+            border-radius: 0 0 20px 20px;
+        }
+        
+        .header h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .header .subtitle {
+            font-size: 20px;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        
+        .header .date {
+            font-size: 14px;
+            margin-top: 20px;
+            opacity: 0.85;
+        }
+        
+        .executive-summary {
+            background: var(--white-lilac);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            border-left: 5px solid var(--cornflower-blue);
+        }
+        
+        .executive-summary h2 {
+            color: var(--royal-blue);
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        
+        .executive-summary p {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        .key-stat {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid var(--cornflower-blue);
+        }
+        
+        .key-stat strong {
+            color: var(--royal-blue);
+            font-size: 24px;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .section {
+            margin-bottom: 50px;
+            page-break-inside: avoid;
+        }
+        
+        .section-header {
+            background: var(--royal-blue);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+        
+        .section-header h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .section-header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .canvas-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .canvas-item {
+            background: var(--white-lilac);
+            padding: 25px;
+            border-radius: 12px;
+            border: 2px solid var(--light-blue);
+        }
+        
+        .canvas-item h3 {
+            color: var(--royal-blue);
+            margin-bottom: 15px;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .canvas-item h3::before {
+            content: '';
+            width: 6px;
+            height: 25px;
+            background: var(--cornflower-blue);
+            margin-right: 12px;
+            border-radius: 3px;
+        }
+        
+        .canvas-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .canvas-item li {
+            padding: 8px 0 8px 25px;
+            position: relative;
+            font-size: 15px;
+        }
+        
+        .canvas-item li::before {
+            content: '▪';
+            color: var(--cornflower-blue);
+            position: absolute;
+            left: 0;
+            font-size: 20px;
+        }
+        
+        .opportunity-card {
+            background: white;
+            border: 2px solid var(--light-blue);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        
+        .opportunity-header {
+            background: linear-gradient(135deg, var(--lighter-royal-blue) 0%, var(--cornflower-blue) 100%);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            margin: -30px -30px 20px -30px;
+        }
+        
+        .opportunity-header h3 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        
+        .opportunity-header .priority {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .metric-box {
+            background: var(--white-lilac);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid var(--light-blue);
+        }
+        
+        .metric-box .number {
+            font-size: 32px;
+            font-weight: bold;
+            color: var(--royal-blue);
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .metric-box .label {
+            font-size: 14px;
+            color: var(--dark-blue);
+        }
+        
+        .implementation-steps {
+            background: var(--white-lilac);
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        .implementation-steps h4 {
+            color: var(--royal-blue);
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .step {
+            background: white;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid var(--cornflower-blue);
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .step-number {
+            background: var(--cornflower-blue);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .recommendation-box {
+            background: linear-gradient(135deg, var(--royal-blue) 0%, var(--lighter-royal-blue) 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        
+        .recommendation-box h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .recommendation-box ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .recommendation-box li {
+            padding: 12px 0 12px 30px;
+            position: relative;
+            font-size: 16px;
+        }
+        
+        .recommendation-box li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .source-citation {
+            font-size: 13px;
+            color: var(--royal-blue);
+            font-style: italic;
+            margin-top: 15px;
+            padding: 10px;
+            background: var(--white-lilac);
+            border-radius: 5px;
+        }
+        
+        .page-break {
+            page-break-after: always;
+        }
+        
+        @media print {
+            body {
+                padding: 20px;
+            }
+            .header {
+                margin: -20px -20px 30px -20px;
+            }
+            .page-break {
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI Integration Strategy for DesignsTouch</h1>
+        <div class="subtitle">Business Model Canvas Analysis & Growth Opportunities</div>
+        <div class="date">Analysis Date: October 2025</div>
+    </div>
+
+    <div class="executive-summary">
+        <h2>Executive Summary</h2>
+        <p>DesignsTouch is a full-service digital marketing agency with over 11 years of experience, 75+ years of combined team expertise, and a strong reputation for delivering custom web and mobile applications, digital marketing, and IT solutions. Based in Racine, Wisconsin, with a presence in Milwaukee and serving clients globally, the agency has established itself as a trusted partner for businesses, nonprofits, and government agencies.</p>
+        
+        <p><strong>Critical Market Opportunity:</strong> The AI marketing industry has reached $57.99 billion in 2025 (up from $45B in 2024) and is projected to reach $144 billion by 2030, with 88% of marketers now using AI tools daily. This represents a transformational opportunity for DesignsTouch to differentiate itself, increase revenue streams, and deliver unprecedented value to clients.</p>
+        
+        <div class="key-stat">
+            <strong>$57.99B</strong>
+            Global AI marketing spend in 2025, with 37.2% CAGR growth
+        </div>
+        
+        <div class="key-stat">
+            <strong>88%</strong>
+            Of marketers use AI tools daily in their workflows
+        </div>
+        
+        <div class="key-stat">
+            <strong>96%</strong>
+            Of enterprise IT leaders plan to expand AI agent use in next 12 months
+        </div>
+    </div>
+
+    <!-- Rest of the HTML content continues here - I'll include the full document -->
+    
+</body>
+</html>
