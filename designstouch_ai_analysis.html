@@ -430,6 +430,17 @@
             align-items: center;
         }
 
+        .nav-logo a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+
+        .nav-logo a:hover {
+            opacity: 0.85;
+        }
+
         .nav-logo img {
             height: 32px;
             width: auto;
@@ -508,7 +519,9 @@
     <nav class="sticky-nav">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="designstouch-logo.png" alt="DesignsTouch">
+                <a href="index.html" title="Back to Home">
+                    <img src="designstouch-logo.png" alt="DesignsTouch">
+                </a>
             </div>
             <div class="nav-links">
                 <a href="#executive-summary">Summary</a>
