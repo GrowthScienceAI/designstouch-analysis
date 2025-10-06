@@ -393,9 +393,66 @@
             page-break-after: always;
         }
 
+        /* Sticky Navigation */
+        .sticky-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--royal-blue);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            padding: 12px 20px;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .nav-logo {
+            color: white;
+            font-weight: 700;
+            font-size: 16px;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+            flex: 1;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 13px;
+            transition: background 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover {
+            background: var(--lighter-royal-blue);
+        }
+
+        body {
+            padding-top: 100px;
+        }
+
         @media print {
+            .sticky-nav {
+                display: none;
+            }
             body {
                 padding: 20px;
+                padding-top: 20px;
             }
             .header {
                 margin: -20px -20px 30px -20px;
@@ -404,9 +461,52 @@
                 page-break-after: always;
             }
         }
+
+        @media (max-width: 768px) {
+            .sticky-nav {
+                padding: 10px 15px;
+            }
+            .nav-container {
+                gap: 10px;
+            }
+            .nav-logo {
+                font-size: 14px;
+                width: 100%;
+                text-align: center;
+            }
+            .nav-links {
+                justify-content: center;
+                width: 100%;
+            }
+            .nav-links a {
+                padding: 6px 10px;
+                font-size: 12px;
+            }
+            body {
+                padding-top: 140px;
+            }
+        }
     </style>
 </head>
 <body>
+    <nav class="sticky-nav">
+        <div class="nav-container">
+            <div class="nav-logo">DesignsTouch AI Strategy</div>
+            <div class="nav-links">
+                <a href="#executive-summary">Summary</a>
+                <a href="#current-business">Current Model</a>
+                <a href="#opportunities">AI Opportunities</a>
+                <a href="#revised-model">Revised Model</a>
+                <a href="#implementation">Implementation</a>
+                <a href="#financials">Financials</a>
+                <a href="#risks">Risks</a>
+                <a href="#metrics">Metrics</a>
+                <a href="#competitive">Competitive</a>
+                <a href="#next-steps">Next Steps</a>
+            </div>
+        </div>
+    </nav>
+
     <div class="header">
         <h1>DesignsTouch AI Integration Strategy</h1>
         <div class="subtitle">Business Model Canvas Analysis & Growth Opportunities</div>
@@ -414,7 +514,7 @@
     </div>
 
     <!-- Executive Summary -->
-    <div class="executive-summary">
+    <div id="executive-summary" class="executive-summary">
         <h2>Executive Summary</h2>
         <p>This analysis provides a detailed roadmap for DesignsTouch, a full-service digital marketing agency in Wisconsin, to capitalize on the $57.99 billion AI marketing opportunity. The strategy outlines five priority AI service offerings with implementation timelines, financial projections, and risk mitigation strategies.</p>
 
@@ -447,7 +547,7 @@
     </div>
 
     <!-- Current Business Model -->
-    <div class="section">
+    <div id="current-business" class="section">
         <div class="section-header">
             <h2>Current Business Model</h2>
             <p>11+ years of proven excellence in digital marketing and development</p>
@@ -481,7 +581,7 @@
     <div class="page-break"></div>
 
     <!-- AI Integration Opportunities -->
-    <div class="section">
+    <div id="opportunities" class="section">
         <div class="section-header">
             <h2>AI Integration Opportunities</h2>
             <p>Five priority opportunities to transform service delivery and unlock new revenue streams</p>
@@ -726,7 +826,7 @@
     <div class="page-break"></div>
 
     <!-- Revised Business Model Canvas -->
-    <div class="section">
+    <div id="revised-model" class="section">
         <div class="section-header">
             <h2>Revised Business Model Canvas</h2>
             <p>Enhanced value propositions and new revenue streams through AI integration</p>
@@ -781,7 +881,7 @@
     </div>
 
     <!-- Implementation Strategy -->
-    <div class="section">
+    <div id="implementation" class="section">
         <div class="section-header">
             <h2>Implementation Strategy</h2>
             <p>12-month phased rollout with clear milestones and deliverables</p>
@@ -912,7 +1012,7 @@
     <div class="page-break"></div>
 
     <!-- Financial Projections -->
-    <div class="section">
+    <div id="financials" class="section">
         <div class="section-header">
             <h2>Financial Projections</h2>
             <p>Conservative estimates showing $190K-$360K first-year revenue potential</p>
@@ -1026,7 +1126,7 @@
     </div>
 
     <!-- Risk Assessment & Mitigation -->
-    <div class="section">
+    <div id="risks" class="section">
         <div class="section-header">
             <h2>Risk Assessment & Mitigation</h2>
             <p>Comprehensive risk management strategies for successful AI integration</p>
@@ -1061,7 +1161,7 @@
     <div class="page-break"></div>
 
     <!-- Success Metrics & KPIs -->
-    <div class="section">
+    <div id="metrics" class="section">
         <div class="section-header">
             <h2>Success Metrics & KPIs</h2>
             <p>Measurable indicators to track progress and optimize performance</p>
@@ -1117,7 +1217,7 @@
     </div>
 
     <!-- Competitive Positioning -->
-    <div class="section">
+    <div id="competitive" class="section">
         <div class="section-header">
             <h2>Competitive Positioning</h2>
             <p>Strategic advantages and market opportunity analysis</p>
@@ -1195,7 +1295,7 @@
     </div>
 
     <!-- Next Steps -->
-    <div class="section">
+    <div id="next-steps" class="section">
         <div class="section-header">
             <h2>Next Steps</h2>
             <p>Immediate actions for the next 30 days</p>
