@@ -415,10 +415,13 @@
         }
 
         .nav-logo {
-            color: white;
-            font-weight: 700;
-            font-size: 16px;
-            white-space: nowrap;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-logo img {
+            height: 32px;
+            width: auto;
         }
 
         .nav-links {
@@ -470,9 +473,11 @@
                 gap: 10px;
             }
             .nav-logo {
-                font-size: 14px;
                 width: 100%;
-                text-align: center;
+                justify-content: center;
+            }
+            .nav-logo img {
+                height: 28px;
             }
             .nav-links {
                 justify-content: center;
@@ -491,7 +496,9 @@
 <body>
     <nav class="sticky-nav">
         <div class="nav-container">
-            <div class="nav-logo">DesignsTouch AI Strategy</div>
+            <div class="nav-logo">
+                <img src="designstouch-logo.png" alt="DesignsTouch">
+            </div>
             <div class="nav-links">
                 <a href="#executive-summary">Summary</a>
                 <a href="#current-business">Current Model</a>
