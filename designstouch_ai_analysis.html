@@ -13,6 +13,8 @@
             --light-blue: #ADD0FF;
             --white-lilac: #F1F3FA;
             --grey: #D0CECE;
+            --highlight-green: #D4EDDA;
+            --muted-text: #6C757D;
         }
 
         * {
@@ -33,7 +35,6 @@
             padding: 40px;
         }
 
-        /* Scroll offset for sticky nav */
         section,
         .executive-summary,
         .section {
@@ -68,36 +69,47 @@
 
         .executive-summary {
             background: var(--white-lilac);
-            padding: 30px;
+            padding: 35px;
             border-radius: 15px;
             margin-bottom: 40px;
-            border-left: 5px solid var(--cornflower-blue);
+            border-left: 6px solid var(--cornflower-blue);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
         .executive-summary h2 {
             color: var(--royal-blue);
             margin-bottom: 20px;
-            font-size: 28px;
+            font-size: 32px;
         }
 
         .executive-summary p {
             margin-bottom: 15px;
-            font-size: 16px;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .highlighted-box {
+            background: var(--highlight-green);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #28A745;
         }
 
         .key-stat {
             background: white;
-            padding: 20px;
+            padding: 25px;
             border-radius: 10px;
             margin: 15px 0;
-            border-left: 4px solid var(--cornflower-blue);
+            border-left: 5px solid var(--cornflower-blue);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         }
 
         .key-stat strong {
             color: var(--royal-blue);
-            font-size: 24px;
+            font-size: 28px;
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
 
         .section {
@@ -108,7 +120,7 @@
         .section-header {
             background: var(--royal-blue);
             color: white;
-            padding: 20px 30px;
+            padding: 25px 30px;
             border-radius: 10px;
             margin-bottom: 25px;
         }
@@ -123,6 +135,28 @@
             opacity: 0.9;
         }
 
+        .section-header-emphasized {
+            background: linear-gradient(135deg, var(--royal-blue) 0%, var(--lighter-royal-blue) 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .section-header-deemphasized {
+            background: var(--grey);
+            color: var(--dark-blue);
+            padding: 20px 30px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        .section-header-deemphasized h2 {
+            font-size: 26px;
+            color: var(--muted-text);
+        }
+
         .canvas-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -135,6 +169,14 @@
             padding: 25px;
             border-radius: 12px;
             border: 2px solid var(--light-blue);
+        }
+
+        .canvas-item-highlighted {
+            background: var(--highlight-green);
+            padding: 30px;
+            border-radius: 12px;
+            border: 3px solid #28A745;
+            box-shadow: 0 4px 12px rgba(40, 167, 69, 0.2);
         }
 
         .canvas-item h3 {
@@ -173,6 +215,39 @@
             font-size: 20px;
         }
 
+        .expanded-content {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid var(--cornflower-blue);
+        }
+
+        .expanded-content h4 {
+            color: var(--royal-blue);
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .expanded-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .expanded-content li {
+            padding: 10px 0 10px 25px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .expanded-content li::before {
+            content: '✓';
+            color: #28A745;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
         .opportunity-card {
             background: white;
             border: 2px solid var(--light-blue);
@@ -182,12 +257,29 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
+        .opportunity-card-highlighted {
+            background: white;
+            border: 3px solid #28A745;
+            border-radius: 12px;
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: 0 6px 16px rgba(40, 167, 69, 0.15);
+        }
+
         .opportunity-header {
             background: linear-gradient(135deg, var(--lighter-royal-blue) 0%, var(--cornflower-blue) 100%);
             color: white;
             padding: 15px 25px;
             border-radius: 8px;
             margin: -30px -30px 20px -30px;
+        }
+
+        .opportunity-header-highlighted {
+            background: linear-gradient(135deg, #28A745 0%, #20C997 100%);
+            color: white;
+            padding: 20px 25px;
+            border-radius: 8px;
+            margin: -35px -35px 25px -35px;
         }
 
         .opportunity-header h3 {
@@ -237,6 +329,14 @@
             margin-top: 20px;
         }
 
+        .implementation-steps-highlighted {
+            background: var(--highlight-green);
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border: 2px solid #28A745;
+        }
+
         .implementation-steps h4 {
             color: var(--royal-blue);
             margin-bottom: 15px;
@@ -251,6 +351,17 @@
             border-left: 4px solid var(--cornflower-blue);
             display: flex;
             align-items: flex-start;
+        }
+
+        .step-highlighted {
+            background: white;
+            padding: 20px 25px;
+            margin: 12px 0;
+            border-radius: 8px;
+            border-left: 5px solid #28A745;
+            display: flex;
+            align-items: flex-start;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         }
 
         .step-number {
@@ -274,13 +385,14 @@
         .recommendation-box {
             background: linear-gradient(135deg, var(--royal-blue) 0%, var(--lighter-royal-blue) 100%);
             color: white;
-            padding: 30px;
+            padding: 35px;
             border-radius: 12px;
             margin: 30px 0;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.15);
         }
 
         .recommendation-box h3 {
-            font-size: 24px;
+            font-size: 28px;
             margin-bottom: 20px;
         }
 
@@ -293,6 +405,7 @@
             padding: 12px 0 12px 30px;
             position: relative;
             font-size: 16px;
+            line-height: 1.6;
         }
 
         .recommendation-box li::before {
@@ -308,77 +421,44 @@
             color: var(--royal-blue);
             font-style: italic;
             margin-top: 15px;
-            padding: 10px;
+            padding: 15px;
             background: var(--white-lilac);
             border-radius: 5px;
         }
 
-        .financial-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .financial-table th {
-            background: var(--royal-blue);
-            color: white;
-            padding: 15px;
-            text-align: left;
-            font-weight: 600;
-        }
-
-        .financial-table td {
-            padding: 15px;
-            border-bottom: 1px solid var(--light-blue);
-        }
-
-        .financial-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .financial-table tr:hover {
-            background: var(--white-lilac);
-        }
-
-        .financial-table .total-row {
-            font-weight: bold;
-            background: var(--white-lilac);
-        }
-
         .risk-item {
             background: white;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 10px;
-            border-left: 4px solid var(--cornflower-blue);
+            padding: 18px;
+            margin: 12px 0;
+            border-radius: 8px;
+            border-left: 3px solid var(--grey);
+            opacity: 0.85;
         }
 
         .risk-item h4 {
-            color: var(--royal-blue);
-            margin-bottom: 10px;
-            font-size: 18px;
+            color: var(--muted-text);
+            margin-bottom: 8px;
+            font-size: 16px;
         }
 
         .risk-item p {
-            color: var(--dark-blue);
-            margin-left: 20px;
+            color: var(--muted-text);
+            margin-left: 15px;
+            font-size: 14px;
         }
 
         .competitive-box {
-            background: var(--white-lilac);
-            padding: 25px;
+            background: var(--highlight-green);
+            padding: 30px;
             border-radius: 10px;
             margin: 20px 0;
+            border: 2px solid #28A745;
         }
 
         .competitive-box h4 {
             color: var(--royal-blue);
             margin-bottom: 15px;
-            font-size: 20px;
+            font-size: 22px;
         }
 
         .competitive-box ul {
@@ -393,7 +473,7 @@
 
         .competitive-box li::before {
             content: '▸';
-            color: var(--cornflower-blue);
+            color: #28A745;
             position: absolute;
             left: 0;
             font-size: 20px;
@@ -404,7 +484,6 @@
             page-break-after: always;
         }
 
-        /* Sticky Navigation */
         .sticky-nav {
             position: fixed;
             top: 0;
@@ -527,11 +606,8 @@
                 <a href="#executive-summary">Summary</a>
                 <a href="#current-business">Current Model</a>
                 <a href="#opportunities">AI Opportunities</a>
-                <a href="#revised-model">Revised Model</a>
                 <a href="#implementation">Implementation</a>
-                <a href="#financials">Financials</a>
                 <a href="#risks">Risks</a>
-                <a href="#metrics">Metrics</a>
                 <a href="#competitive">Competitive</a>
                 <a href="#next-steps">Next Steps</a>
             </div>
@@ -544,10 +620,17 @@
         <div class="date">Analysis Date: October 2025 | Confidential Business Strategy</div>
     </div>
 
-    <!-- Executive Summary -->
+    <!-- Executive Summary - HIGHLIGHTED & EXPANDED -->
     <div id="executive-summary" class="executive-summary">
         <h2>Executive Summary</h2>
-        <p>This analysis provides a detailed roadmap for DesignsTouch, a full-service digital marketing agency in Wisconsin, to capitalize on the $57.99 billion AI marketing opportunity. The strategy outlines five priority AI service offerings with implementation timelines, financial projections, and risk mitigation strategies.</p>
+
+        <div class="highlighted-box">
+            <p><strong>This analysis provides a comprehensive and detailed roadmap for DesignsTouch, a full-service digital marketing agency in Wisconsin, to strategically capitalize on the $57.99 billion AI marketing opportunity.</strong> The strategy outlines five priority AI service offerings with implementation timelines, financial projections, and comprehensive risk mitigation strategies designed to position DesignsTouch as a regional AI-first digital agency leader.</p>
+        </div>
+
+        <p>The rapid evolution of AI technology presents a unique window of opportunity for DesignsTouch to differentiate itself in an increasingly competitive market. This analysis identifies specific, actionable opportunities that leverage the company's existing strengths—including 11+ years of market presence, 100+ established client relationships, and deep expertise across multiple industries—to create new revenue streams and enhance service delivery.</p>
+
+        <p><strong>Strategic Positioning:</strong> DesignsTouch's existing client base, particularly businesses, nonprofits, and government agencies, represents a prime market for AI adoption. These organizations are actively seeking trusted partners who can guide them through digital transformation with practical, results-driven AI implementations.</p>
 
         <h3 style="color: var(--royal-blue); margin-top: 25px; margin-bottom: 15px; font-size: 22px;">Key Findings</h3>
 
@@ -567,87 +650,105 @@
         </div>
 
         <div class="key-stat">
-            <strong>300-400%</strong>
-            ROI on approximately $20K initial investment
-        </div>
-
-        <div class="key-stat">
             <strong>12 Months</strong>
-            Phased implementation timeline
+            Phased implementation timeline with clear milestones
         </div>
     </div>
 
-    <!-- Current Business Model -->
+    <!-- Current Business Model - HIGHLIGHTED & EXPANDED -->
     <div id="current-business" class="section">
-        <div class="section-header">
+        <div class="section-header-emphasized">
             <h2>Current Business Model</h2>
-            <p>11+ years of proven excellence in digital marketing and development</p>
+            <p>11+ years of proven excellence in digital marketing and development with a strong foundation for AI integration</p>
         </div>
 
         <div class="canvas-grid">
-            <div class="canvas-item">
+            <div class="canvas-item-highlighted">
                 <h3>Company Overview</h3>
                 <ul>
-                    <li>11+ years in market</li>
+                    <li><strong>11+ years in market</strong> - Established credibility and trust</li>
                     <li>75+ combined years of team expertise</li>
                     <li>Located in Racine & Milwaukee, Wisconsin</li>
-                    <li>100+ clients: businesses, nonprofits, and government agencies</li>
+                    <li><strong>100+ clients: businesses, nonprofits, and government agencies</strong> - This diverse client base is often the most hesitant when trying to adopt AI, presenting a significant opportunity for DesignsTouch to become their trusted AI implementation partner</li>
                 </ul>
             </div>
 
-            <div class="canvas-item">
-                <h3>Core Services</h3>
+            <div class="canvas-item-highlighted">
+                <h3>Core Services - Perfect Foundation for AI</h3>
                 <ul>
                     <li>Custom Website Design & Development</li>
                     <li>Mobile App Development (iOS & Android)</li>
                     <li>Digital Marketing & SEO</li>
-                    <li>E-commerce Solutions</li>
-                    <li>IT Consulting & Strategy</li>
+                    <li><strong>E-commerce Solutions</strong> - Ideal for AI personalization and chatbot integration</li>
+                    <li><strong>IT Consulting & Strategy</strong> - Perfect platform for expanding into AI consulting services</li>
                     <li>Brand Identity & Graphic Design</li>
                 </ul>
             </div>
+        </div>
+
+        <div class="expanded-content">
+            <h4>Why This Foundation Matters for AI Integration</h4>
+            <ul>
+                <li>Established client relationships reduce the sales cycle for new AI services</li>
+                <li>Existing IT consulting practice provides credibility for AI advisory services</li>
+                <li>E-commerce clients can immediately benefit from AI chatbots and personalization engines</li>
+                <li>Government and nonprofit clients often lag in technology adoption, creating a first-mover advantage opportunity</li>
+                <li>Cross-selling AI services to existing clients offers the highest ROI and lowest risk entry point</li>
+            </ul>
         </div>
     </div>
 
     <div class="page-break"></div>
 
-    <!-- AI Integration Opportunities -->
+    <!-- AI Integration Opportunities - EXPANDED HIGHLIGHTED PRIORITIES -->
     <div id="opportunities" class="section">
-        <div class="section-header">
+        <div class="section-header-emphasized">
             <h2>AI Integration Opportunities</h2>
             <p>Five priority opportunities to transform service delivery and unlock new revenue streams</p>
         </div>
 
-        <!-- Priority 1 -->
-        <div class="opportunity-card">
-            <div class="opportunity-header">
-                <div class="priority">Priority 1</div>
+        <!-- Priority 1 - HIGHLIGHTED & EXPANDED -->
+        <div class="opportunity-card-highlighted">
+            <div class="opportunity-header-highlighted">
+                <div class="priority">Priority 1 - CRITICAL OPPORTUNITY</div>
                 <h3>AI-Powered Content Generation & Marketing Automation</h3>
             </div>
 
-            <div style="background: var(--white-lilac); padding: 20px; border-radius: 8px; margin: 20px 0;">
-                <strong style="color: var(--royal-blue); font-size: 20px;">Revenue Potential: $15K-$30K/month within 6 months</strong>
+            <div style="background: #FFF3CD; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #FFC107;">
+                <strong style="color: var(--dark-blue); font-size: 20px;">Revenue Potential: $15K-$30K/month within 6 months</strong>
             </div>
 
             <h4 style="color: var(--royal-blue); margin: 20px 0 15px 0; font-size: 20px;">Service Offerings</h4>
             <ul style="list-style: none; padding-left: 0;">
                 <li style="padding: 8px 0 8px 25px; position: relative;">
-                    <span style="position: absolute; left: 0; color: var(--cornflower-blue); font-size: 20px;">▪</span>
+                    <span style="position: absolute; left: 0; color: #28A745; font-size: 20px;">▪</span>
                     AI Content Strategy & Production
                 </li>
                 <li style="padding: 8px 0 8px 25px; position: relative;">
-                    <span style="position: absolute; left: 0; color: var(--cornflower-blue); font-size: 20px;">▪</span>
-                    Automated SEO Content Optimization
+                    <span style="position: absolute; left: 0; color: #28A745; font-size: 20px;">▪</span>
+                    <strong>Automated SEO Content Optimization</strong> - This is huge. ALL companies are trying to figure out how to rank in ChatGPT, Perplexity, and other AI search tools. This represents a massive shift in how content needs to be optimized.
                 </li>
                 <li style="padding: 8px 0 8px 25px; position: relative;">
-                    <span style="position: absolute; left: 0; color: var(--cornflower-blue); font-size: 20px;">▪</span>
+                    <span style="position: absolute; left: 0; color: #28A745; font-size: 20px;">▪</span>
                     Personalized Email Marketing Automation
                 </li>
                 <li style="padding: 8px 0 8px 25px; position: relative;">
-                    <span style="position: absolute; left: 0; color: var(--cornflower-blue); font-size: 20px;">▪</span>
-                    Social Media Content Scheduling & Optimization
+                    <span style="position: absolute; left: 0; color: #28A745; font-size: 20px;">▪</span>
+                    <strong>Social Media Content Scheduling & Optimization</strong> - AI can generate platform-specific content variations and optimal posting times
                 </li>
             </ul>
+
+            <div class="expanded-content">
+                <h4>Why This is Priority #1</h4>
+                <ul>
+                    <li><strong>Immediate Value:</strong> Content creation is time-consuming and expensive; AI can deliver 60-70% time savings</li>
+                    <li><strong>SEO Revolution:</strong> With AI-powered search (ChatGPT, Perplexity, Claude), companies need to optimize for "answer engines" not just search engines</li>
+                    <li><strong>Scalability:</strong> Can serve multiple clients simultaneously with recurring monthly revenue</li>
+                    <li><strong>Low Barrier to Entry:</strong> Team can be trained on AI content tools within 30-60 days</li>
+                    <li><strong>Market Demand:</strong> 50% of marketers already using AI for content, showing validated market need</li>
+                    <li><strong>Upsell Opportunity:</strong> Content services naturally lead to SEO, email marketing, and social media management contracts</li>
+                </ul>
+            </div>
 
             <div class="metrics-grid">
                 <div class="metric-box">
@@ -665,36 +766,48 @@
             </div>
         </div>
 
-        <!-- Priority 2 -->
-        <div class="opportunity-card">
-            <div class="opportunity-header">
-                <div class="priority">Priority 2</div>
+        <!-- Priority 2 - HIGHLIGHTED & EXPANDED -->
+        <div class="opportunity-card-highlighted">
+            <div class="opportunity-header-highlighted">
+                <div class="priority">Priority 2 - HIGH IMPACT</div>
                 <h3>AI Chatbots & Conversational Marketing</h3>
             </div>
 
-            <div style="background: var(--white-lilac); padding: 20px; border-radius: 8px; margin: 20px 0;">
-                <strong style="color: var(--royal-blue); font-size: 20px;">Revenue Potential: $1,500-$5,000 setup + $300-$800/month per client</strong>
+            <div style="background: #FFF3CD; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #FFC107;">
+                <strong style="color: var(--dark-blue); font-size: 20px;">Revenue Potential: $1,500-$5,000 setup + $300-$800/month per client</strong>
             </div>
 
             <h4 style="color: var(--royal-blue); margin: 20px 0 15px 0; font-size: 20px;">Service Offerings</h4>
             <ul style="list-style: none; padding-left: 0;">
                 <li style="padding: 8px 0 8px 25px; position: relative;">
-                    <span style="position: absolute; left: 0; color: var(--cornflower-blue); font-size: 20px;">▪</span>
-                    Custom AI Chatbot Development
+                    <span style="position: absolute; left: 0; color: #28A745; font-size: 20px;">▪</span>
+                    <strong>Custom AI Chatbot Development</strong> - Any site with a generic chatbot can significantly grow online sales with proper AI implementation
                 </li>
                 <li style="padding: 8px 0 8px 25px; position: relative;">
-                    <span style="position: absolute; left: 0; color: var(--cornflower-blue); font-size: 20px;">▪</span>
+                    <span style="position: absolute; left: 0; color: #28A745; font-size: 20px;">▪</span>
                     24/7 Customer Support Automation
                 </li>
                 <li style="padding: 8px 0 8px 25px; position: relative;">
-                    <span style="position: absolute; left: 0; color: var(--cornflower-blue); font-size: 20px;">▪</span>
-                    Lead Qualification & Nurturing Bots
+                    <span style="position: absolute; left: 0; color: #28A745; font-size: 20px;">▪</span>
+                    <strong>Lead Qualification & Nurturing Bots</strong> - Automated qualification can significantly increase sales team efficiency
                 </li>
                 <li style="padding: 8px 0 8px 25px; position: relative;">
-                    <span style="position: absolute; left: 0; color: var(--cornflower-blue); font-size: 20px;">▪</span>
+                    <span style="position: absolute; left: 0; color: #28A745; font-size: 20px;">▪</span>
                     Multi-Channel Conversational Marketing
                 </li>
             </ul>
+
+            <div class="expanded-content">
+                <h4>Strategic Advantages of Chatbot Services</h4>
+                <ul>
+                    <li><strong>Recurring Revenue Model:</strong> Setup fee + monthly maintenance creates predictable income</li>
+                    <li><strong>E-commerce Gold Mine:</strong> DesignsTouch's existing e-commerce clients can see immediate ROI from sales chatbots</li>
+                    <li><strong>24/7 Value Proposition:</strong> Small businesses love the idea of never missing a lead</li>
+                    <li><strong>Data Collection:</strong> Chatbots gather valuable customer insights that can inform other services</li>
+                    <li><strong>Competitive Differentiation:</strong> Most Wisconsin agencies don't offer sophisticated chatbot implementation</li>
+                    <li><strong>Scalable Delivery:</strong> Once templates are built, deployment to new clients is rapid</li>
+                </ul>
+            </div>
 
             <div class="metrics-grid">
                 <div class="metric-box">
@@ -712,36 +825,47 @@
             </div>
         </div>
 
-        <!-- Priority 3 -->
-        <div class="opportunity-card">
-            <div class="opportunity-header">
-                <div class="priority">Priority 3</div>
+        <!-- Priority 3 - HIGHLIGHTED & EXPANDED -->
+        <div class="opportunity-card-highlighted">
+            <div class="opportunity-header-highlighted">
+                <div class="priority">Priority 3 - PREMIUM POSITIONING</div>
                 <h3>AI-Enhanced Website & App Development</h3>
             </div>
 
-            <div style="background: var(--white-lilac); padding: 20px; border-radius: 8px; margin: 20px 0;">
-                <strong style="color: var(--royal-blue); font-size: 20px;">Revenue Potential: 20-30% premium on development projects</strong>
+            <div style="background: #FFF3CD; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #FFC107;">
+                <strong style="color: var(--dark-blue); font-size: 20px;">Revenue Potential: 20-30% premium on development projects</strong>
             </div>
 
             <h4 style="color: var(--royal-blue); margin: 20px 0 15px 0; font-size: 20px;">Service Offerings</h4>
             <ul style="list-style: none; padding-left: 0;">
                 <li style="padding: 8px 0 8px 25px; position: relative;">
-                    <span style="position: absolute; left: 0; color: var(--cornflower-blue); font-size: 20px;">▪</span>
-                    AI-Assisted Rapid Prototyping
+                    <span style="position: absolute; left: 0; color: #28A745; font-size: 20px;">▪</span>
+                    <strong>AI-Assisted Rapid Prototyping</strong> - Reduce development time while increasing quality
                 </li>
                 <li style="padding: 8px 0 8px 25px; position: relative;">
-                    <span style="position: absolute; left: 0; color: var(--cornflower-blue); font-size: 20px;">▪</span>
+                    <span style="position: absolute; left: 0; color: #28A745; font-size: 20px;">▪</span>
                     Smart Personalization Engine
                 </li>
                 <li style="padding: 8px 0 8px 25px; position: relative;">
-                    <span style="position: absolute; left: 0; color: var(--cornflower-blue); font-size: 20px;">▪</span>
-                    Predictive Analytics Dashboard
+                    <span style="position: absolute; left: 0; color: #28A745; font-size: 20px;">▪</span>
+                    <strong>Predictive Analytics Dashboard</strong> - Help clients make data-driven decisions
                 </li>
                 <li style="padding: 8px 0 8px 25px; position: relative;">
-                    <span style="position: absolute; left: 0; color: var(--cornflower-blue); font-size: 20px;">▪</span>
+                    <span style="position: absolute; left: 0; color: #28A745; font-size: 20px;">▪</span>
                     AI-Powered A/B Testing
                 </li>
             </ul>
+
+            <div class="expanded-content">
+                <h4>Enhanced Development Capabilities</h4>
+                <ul>
+                    <li><strong>Premium Pricing Justification:</strong> AI-enhanced projects deliver measurably better results</li>
+                    <li><strong>Faster Time-to-Market:</strong> 10x increase in developer output means faster delivery without sacrificing quality</li>
+                    <li><strong>Competitive Advantage:</strong> AI-powered prototyping allows clients to test ideas before full investment</li>
+                    <li><strong>Personalization at Scale:</strong> Dynamic content that adapts to user behavior increases conversion rates</li>
+                    <li><strong>Predictive Insights:</strong> Analytics dashboards that forecast trends give clients strategic advantages</li>
+                </ul>
+            </div>
 
             <div class="metrics-grid">
                 <div class="metric-box">
@@ -759,36 +883,60 @@
             </div>
         </div>
 
-        <!-- Priority 4 -->
-        <div class="opportunity-card">
-            <div class="opportunity-header">
-                <div class="priority">Priority 4</div>
+        <!-- Priority 4 - HEAVILY HIGHLIGHTED & EXPANDED -->
+        <div class="opportunity-card-highlighted">
+            <div class="opportunity-header-highlighted">
+                <div class="priority">Priority 4 - STRATEGIC CONSULTING</div>
                 <h3>AI Strategy Consulting & Training</h3>
             </div>
 
-            <div style="background: var(--white-lilac); padding: 20px; border-radius: 8px; margin: 20px 0;">
-                <strong style="color: var(--royal-blue); font-size: 20px;">Revenue Potential: $5K-$25K consulting + $3K-$5K/month retainers</strong>
+            <div style="background: #FFF3CD; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #FFC107;">
+                <strong style="color: var(--dark-blue); font-size: 20px;">Revenue Potential: $5K-$25K consulting + $3K-$5K/month retainers</strong>
             </div>
 
             <h4 style="color: var(--royal-blue); margin: 20px 0 15px 0; font-size: 20px;">Service Offerings</h4>
             <ul style="list-style: none; padding-left: 0;">
                 <li style="padding: 8px 0 8px 25px; position: relative;">
-                    <span style="position: absolute; left: 0; color: var(--cornflower-blue); font-size: 20px;">▪</span>
-                    AI Readiness Assessment
+                    <span style="position: absolute; left: 0; color: #28A745; font-size: 20px;">▪</span>
+                    <strong>AI Readiness Assessment</strong> - Comprehensive evaluation of client's AI opportunities
                 </li>
                 <li style="padding: 8px 0 8px 25px; position: relative;">
-                    <span style="position: absolute; left: 0; color: var(--cornflower-blue); font-size: 20px;">▪</span>
+                    <span style="position: absolute; left: 0; color: #28A745; font-size: 20px;">▪</span>
                     Custom AI Implementation Roadmap
                 </li>
                 <li style="padding: 8px 0 8px 25px; position: relative;">
-                    <span style="position: absolute; left: 0; color: var(--cornflower-blue); font-size: 20px;">▪</span>
-                    AI Training Workshops
+                    <span style="position: absolute; left: 0; color: #28A745; font-size: 20px;">▪</span>
+                    <strong>AI Training Workshops</strong> - Hands-on training for client teams on AI tools and best practices
                 </li>
                 <li style="padding: 8px 0 8px 25px; position: relative;">
-                    <span style="position: absolute; left: 0; color: var(--cornflower-blue); font-size: 20px;">▪</span>
+                    <span style="position: absolute; left: 0; color: #28A745; font-size: 20px;">▪</span>
                     Ongoing AI Advisory Services
                 </li>
             </ul>
+
+            <div class="expanded-content">
+                <h4>Why AI Consulting is a Game-Changer</h4>
+                <ul>
+                    <li><strong>Highest Margin Service:</strong> Consulting typically yields 60-70% profit margins vs. 30-40% for implementation</li>
+                    <li><strong>Executive Access:</strong> C-suite engagements open doors for larger enterprise contracts</li>
+                    <li><strong>Massive Market Gap:</strong> 78% of organizations use AI in at least one function, but 39% of marketers are unsure about safe AI use - huge education opportunity</li>
+                    <li><strong>Recurring Revenue:</strong> Advisory retainers provide predictable monthly income</li>
+                    <li><strong>Thought Leadership:</strong> Consulting positions DesignsTouch as a regional AI authority</li>
+                    <li><strong>Natural Upsell Path:</strong> Assessments and roadmaps lead directly to implementation projects</li>
+                    <li><strong>Government/Nonprofit Focus:</strong> These sectors desperately need guidance but lack internal expertise</li>
+                </ul>
+            </div>
+
+            <div class="expanded-content">
+                <h4>AI Training Workshop Opportunities</h4>
+                <ul>
+                    <li><strong>Executive AI Workshops:</strong> Half-day sessions for leadership teams on AI strategy ($2,500-$5,000)</li>
+                    <li><strong>Team Training Programs:</strong> Multi-session training for marketing and operations teams ($5,000-$10,000)</li>
+                    <li><strong>Industry-Specific Training:</strong> Customized workshops for healthcare, manufacturing, or nonprofit sectors</li>
+                    <li><strong>Certification Programs:</strong> Develop proprietary AI certification to create ongoing education revenue</li>
+                    <li><strong>Workshop Series:</strong> Quarterly training events to build community and generate leads</li>
+                </ul>
+            </div>
 
             <div class="metrics-grid">
                 <div class="metric-box">
@@ -806,36 +954,47 @@
             </div>
         </div>
 
-        <!-- Priority 5 -->
-        <div class="opportunity-card">
-            <div class="opportunity-header">
-                <div class="priority">Priority 5</div>
+        <!-- Priority 5 - HIGHLIGHTED & EXPANDED -->
+        <div class="opportunity-card-highlighted">
+            <div class="opportunity-header-highlighted">
+                <div class="priority">Priority 5 - DATA INTELLIGENCE</div>
                 <h3>AI-Powered Analytics & Insights</h3>
             </div>
 
-            <div style="background: var(--white-lilac); padding: 20px; border-radius: 8px; margin: 20px 0;">
-                <strong style="color: var(--royal-blue); font-size: 20px;">Revenue Potential: $1,500-$3,500/month per client</strong>
+            <div style="background: #FFF3CD; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #FFC107;">
+                <strong style="color: var(--dark-blue); font-size: 20px;">Revenue Potential: $1,500-$3,500/month per client</strong>
             </div>
 
             <h4 style="color: var(--royal-blue); margin: 20px 0 15px 0; font-size: 20px;">Service Offerings</h4>
             <ul style="list-style: none; padding-left: 0;">
                 <li style="padding: 8px 0 8px 25px; position: relative;">
-                    <span style="position: absolute; left: 0; color: var(--cornflower-blue); font-size: 20px;">▪</span>
+                    <span style="position: absolute; left: 0; color: #28A745; font-size: 20px;">▪</span>
                     Predictive Analytics Dashboards
                 </li>
                 <li style="padding: 8px 0 8px 25px; position: relative;">
-                    <span style="position: absolute; left: 0; color: var(--cornflower-blue); font-size: 20px;">▪</span>
-                    Automated Reporting & Insights
+                    <span style="position: absolute; left: 0; color: #28A745; font-size: 20px;">▪</span>
+                    <strong>Automated Reporting & Insights</strong> - Replace manual reporting with AI-generated insights
                 </li>
                 <li style="padding: 8px 0 8px 25px; position: relative;">
-                    <span style="position: absolute; left: 0; color: var(--cornflower-blue); font-size: 20px;">▪</span>
+                    <span style="position: absolute; left: 0; color: #28A745; font-size: 20px;">▪</span>
                     Customer Journey Analytics
                 </li>
                 <li style="padding: 8px 0 8px 25px; position: relative;">
-                    <span style="position: absolute; left: 0; color: var(--cornflower-blue); font-size: 20px;">▪</span>
-                    Competitive Intelligence Automation
+                    <span style="position: absolute; left: 0; color: #28A745; font-size: 20px;">▪</span>
+                    <strong>Competitive Intelligence Automation</strong> - AI-powered competitive monitoring and analysis
                 </li>
             </ul>
+
+            <div class="expanded-content">
+                <h4>Advanced Analytics Capabilities</h4>
+                <ul>
+                    <li><strong>Recurring Monthly Revenue:</strong> Analytics dashboards require ongoing monitoring and optimization</li>
+                    <li><strong>Executive Value:</strong> Predictive insights help leadership make better strategic decisions</li>
+                    <li><strong>Competitive Intelligence:</strong> Automated monitoring of competitor activities saves hours of manual research</li>
+                    <li><strong>Customer Journey Mapping:</strong> AI can identify patterns humans miss in customer behavior data</li>
+                    <li><strong>ROI Measurement:</strong> Clear metrics demonstrate the value of all DesignsTouch services</li>
+                </ul>
+            </div>
 
             <div class="metrics-grid">
                 <div class="metric-box">
@@ -856,181 +1015,126 @@
 
     <div class="page-break"></div>
 
-    <!-- Revised Business Model Canvas -->
-    <div id="revised-model" class="section">
-        <div class="section-header">
-            <h2>Revised Business Model Canvas</h2>
-            <p>Enhanced value propositions and new revenue streams through AI integration</p>
-        </div>
-
-        <div class="canvas-grid">
-            <div class="canvas-item">
-                <h3>Enhanced Value Propositions</h3>
-                <ul>
-                    <li><strong>NEW:</strong> "AI-First Digital Agency" positioning</li>
-                    <li><strong>NEW:</strong> 60-70% faster content production</li>
-                    <li><strong>NEW:</strong> 24/7 automated customer engagement</li>
-                    <li><strong>NEW:</strong> Predictive insights & data-driven decisions</li>
-                    <li><strong>NEW:</strong> AI training & knowledge transfer</li>
-                </ul>
-            </div>
-
-            <div class="canvas-item">
-                <h3>New Revenue Streams</h3>
-                <ul>
-                    <li>AI Content Services: $2,500-$5,000/month</li>
-                    <li>AI Chatbot Services: $1,500-$5,000 setup + $300-$800/month</li>
-                    <li>AI Strategy Consulting: $5,000-$25,000 + retainers</li>
-                    <li>AI Training & Workshops: $2,500-$10,000 per session</li>
-                    <li>AI Analytics Services: $1,500-$3,500/month</li>
-                    <li>AI-Enhanced Development: 20-30% premium</li>
-                </ul>
-            </div>
-
-            <div class="canvas-item">
-                <h3>Enhanced Customer Segments</h3>
-                <ul>
-                    <li><strong>NEW:</strong> Tech-forward startups and scale-ups</li>
-                    <li><strong>NEW:</strong> Companies seeking digital transformation</li>
-                    <li><strong>NEW:</strong> Enterprises needing AI strategy consulting</li>
-                    <li><strong>EXPANDED:</strong> E-commerce (AI personalization)</li>
-                    <li><strong>EXPANDED:</strong> Professional services (AI efficiency)</li>
-                </ul>
-            </div>
-
-            <div class="canvas-item">
-                <h3>Key Resources</h3>
-                <ul>
-                    <li>AI-trained team members</li>
-                    <li>Premium AI tool subscriptions</li>
-                    <li>AI implementation playbooks</li>
-                    <li>Case studies & testimonials</li>
-                    <li>Industry certifications</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <!-- Implementation Strategy -->
+    <!-- Implementation Strategy - HIGHLIGHTED & EXPANDED -->
     <div id="implementation" class="section">
-        <div class="section-header">
+        <div class="section-header-emphasized">
             <h2>Implementation Strategy</h2>
             <p>12-month phased rollout with clear milestones and deliverables</p>
         </div>
 
-        <div class="implementation-steps">
+        <div class="implementation-steps-highlighted">
             <h4 style="font-size: 24px; color: var(--royal-blue); margin-bottom: 20px;">Phase 1: Foundation (Months 1-3)</h4>
 
-            <div class="step">
+            <div class="step-highlighted">
                 <div class="step-number">1</div>
                 <div class="step-content">
                     <strong style="color: var(--royal-blue);">Leadership Alignment (Month 1)</strong>
                     <ul style="margin-top: 10px; list-style: none; padding-left: 0;">
-                        <li style="padding: 5px 0;">• Executive AI workshop</li>
+                        <li style="padding: 5px 0;"><strong>• Executive AI workshop</strong> - Critical first step to ensure leadership buy-in</li>
                         <li style="padding: 5px 0;">• Budget allocation ($10K-$25K)</li>
-                        <li style="padding: 5px 0;">• Assign project champion</li>
+                        <li style="padding: 5px 0;"><strong>• Assign project champion</strong> - Dedicated owner is essential for success</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="step">
+            <div class="step-highlighted">
                 <div class="step-number">2</div>
                 <div class="step-content">
                     <strong style="color: var(--royal-blue);">Team Training (Months 1-2)</strong>
                     <ul style="margin-top: 10px; list-style: none; padding-left: 0;">
                         <li style="padding: 5px 0;">• AI marketing courses & certifications</li>
-                        <li style="padding: 5px 0;">• Tool evaluation (10-15 AI platforms)</li>
-                        <li style="padding: 5px 0;">• Internal usage guidelines</li>
+                        <li style="padding: 5px 0;"><strong>• Tool evaluation (10-15 AI platforms)</strong> - Comprehensive evaluation ensures right tech stack</li>
+                        <li style="padding: 5px 0;"><strong>• Internal usage guidelines</strong> - Establish best practices and quality standards</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="step">
+            <div class="step-highlighted">
                 <div class="step-number">3</div>
                 <div class="step-content">
                     <strong style="color: var(--royal-blue);">Pilot Launch (Months 2-3)</strong>
                     <ul style="margin-top: 10px; list-style: none; padding-left: 0;">
-                        <li style="padding: 5px 0;">• 3-5 pilot clients</li>
-                        <li style="padding: 5px 0;">• Document workflows</li>
-                        <li style="padding: 5px 0;">• Collect testimonials</li>
+                        <li style="padding: 5px 0;"><strong>• 3-5 pilot clients</strong> - Select diverse industries to build varied case studies</li>
+                        <li style="padding: 5px 0;"><strong>• Document workflows</strong> - Create repeatable processes for scaling</li>
+                        <li style="padding: 5px 0;"><strong>• Collect testimonials</strong> - Early success stories are critical for marketing</li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="implementation-steps">
+        <div class="implementation-steps-highlighted">
             <h4 style="font-size: 24px; color: var(--royal-blue); margin-bottom: 20px;">Phase 2: Expansion (Months 4-6)</h4>
 
-            <div class="step">
+            <div class="step-highlighted">
                 <div class="step-number">4</div>
                 <div class="step-content">
                     <strong style="color: var(--royal-blue);">Full Service Launch (Month 4)</strong>
                     <ul style="margin-top: 10px; list-style: none; padding-left: 0;">
-                        <li style="padding: 5px 0;">• Website updates</li>
-                        <li style="padding: 5px 0;">• Service packages & pricing</li>
+                        <li style="padding: 5px 0;"><strong>• Website updates</strong> - Refresh positioning as "AI-First Digital Agency"</li>
+                        <li style="padding: 5px 0;"><strong>• Service packages & pricing</strong> - Clear, tiered offerings for different client needs</li>
                         <li style="padding: 5px 0;">• Sales collateral</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="step">
+            <div class="step-highlighted">
                 <div class="step-number">5</div>
                 <div class="step-content">
                     <strong style="color: var(--royal-blue);">Marketing Activation (Months 4-6)</strong>
                     <ul style="margin-top: 10px; list-style: none; padding-left: 0;">
-                        <li style="padding: 5px 0;">• "AI-First Agency" campaign</li>
-                        <li style="padding: 5px 0;">• Webinar series</li>
+                        <li style="padding: 5px 0;"><strong>• "AI-First Agency" campaign</strong> - Position as regional AI leader</li>
+                        <li style="padding: 5px 0;"><strong>• Webinar series</strong> - Educational content builds authority and generates leads</li>
                         <li style="padding: 5px 0;">• Target: 15-20 new clients</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="step">
+            <div class="step-highlighted">
                 <div class="step-number">6</div>
                 <div class="step-content">
                     <strong style="color: var(--royal-blue);">Process Optimization (Months 5-6)</strong>
                     <ul style="margin-top: 10px; list-style: none; padding-left: 0;">
                         <li style="padding: 5px 0;">• Refine delivery processes</li>
-                        <li style="padding: 5px 0;">• Create implementation playbooks</li>
+                        <li style="padding: 5px 0;"><strong>• Create implementation playbooks</strong> - Standardized processes enable scaling</li>
                         <li style="padding: 5px 0;">• Scale team capacity</li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="implementation-steps">
+        <div class="implementation-steps-highlighted">
             <h4 style="font-size: 24px; color: var(--royal-blue); margin-bottom: 20px;">Phase 3: Scale (Months 7-12)</h4>
 
-            <div class="step">
+            <div class="step-highlighted">
                 <div class="step-number">7</div>
                 <div class="step-content">
                     <strong style="color: var(--royal-blue);">Advanced Services (Months 7-8)</strong>
                     <ul style="margin-top: 10px; list-style: none; padding-left: 0;">
-                        <li style="padding: 5px 0;">• Launch consulting & analytics</li>
-                        <li style="padding: 5px 0;">• Industry-specific packages</li>
+                        <li style="padding: 5px 0;"><strong>• Launch consulting & analytics</strong> - High-margin service expansion</li>
+                        <li style="padding: 5px 0;"><strong>• Industry-specific packages</strong> - Tailored solutions for key verticals</li>
                         <li style="padding: 5px 0;">• Enterprise targeting</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="step">
+            <div class="step-highlighted">
                 <div class="step-number">8</div>
                 <div class="step-content">
                     <strong style="color: var(--royal-blue);">Thought Leadership (Months 8-10)</strong>
                     <ul style="margin-top: 10px; list-style: none; padding-left: 0;">
                         <li style="padding: 5px 0;">• AI marketing awards</li>
-                        <li style="padding: 5px 0;">• Conference speaking</li>
-                        <li style="padding: 5px 0;">• Whitepaper publication</li>
+                        <li style="padding: 5px 0;"><strong>• Conference speaking</strong> - Establish regional authority</li>
+                        <li style="padding: 5px 0;"><strong>• Whitepaper publication</strong> - Content marketing drives inbound leads</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="step">
+            <div class="step-highlighted">
                 <div class="step-number">9</div>
                 <div class="step-content">
                     <strong style="color: var(--royal-blue);">Systematize (Months 10-12)</strong>
                     <ul style="margin-top: 10px; list-style: none; padding-left: 0;">
-                        <li style="padding: 5px 0;">• Hire AI services team</li>
+                        <li style="padding: 5px 0;"><strong>• Hire AI services team</strong> - Dedicated resources for scaling</li>
                         <li style="padding: 5px 0;">• Partner/reseller program</li>
                         <li style="padding: 5px 0;">• Market expansion</li>
                         <li style="padding: 5px 0;">• Target: 40-50 clients, $200K+ revenue</li>
@@ -1040,125 +1144,9 @@
         </div>
     </div>
 
-    <div class="page-break"></div>
-
-    <!-- Financial Projections -->
-    <div id="financials" class="section">
-        <div class="section-header">
-            <h2>Financial Projections</h2>
-            <p>Conservative estimates showing $190K-$360K first-year revenue potential</p>
-        </div>
-
-        <h3 style="color: var(--royal-blue); margin: 30px 0 20px 0; font-size: 24px;">Initial Investment (Months 1-3)</h3>
-        <table class="financial-table">
-            <thead>
-                <tr>
-                    <th>Category</th>
-                    <th>Cost</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>AI Tools & Software</td>
-                    <td>$1,200/month</td>
-                </tr>
-                <tr>
-                    <td>Team Training</td>
-                    <td>$3,500</td>
-                </tr>
-                <tr>
-                    <td>Website Updates & Marketing</td>
-                    <td>$5,000</td>
-                </tr>
-                <tr>
-                    <td>Marketing Campaign</td>
-                    <td>$4,000</td>
-                </tr>
-                <tr>
-                    <td>Contingency (15%)</td>
-                    <td>$2,055</td>
-                </tr>
-                <tr class="total-row">
-                    <td><strong>TOTAL INITIAL INVESTMENT</strong></td>
-                    <td><strong>$19,355</strong></td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h3 style="color: var(--royal-blue); margin: 40px 0 20px 0; font-size: 24px;">Monthly Operating Costs</h3>
-        <div class="metrics-grid">
-            <div class="metric-box">
-                <span class="number">$1,200-$1,800</span>
-                <span class="label">AI Software Subscriptions</span>
-            </div>
-            <div class="metric-box">
-                <span class="number">$300-$500</span>
-                <span class="label">Ongoing Training</span>
-            </div>
-            <div class="metric-box">
-                <span class="number">$1,000-$2,000</span>
-                <span class="label">Marketing & Lead Gen</span>
-            </div>
-        </div>
-        <div style="text-align: center; margin-top: 20px; padding: 20px; background: var(--white-lilac); border-radius: 10px;">
-            <strong style="color: var(--royal-blue); font-size: 20px;">Total Monthly Operating: $2,500-$4,300</strong>
-        </div>
-
-        <h3 style="color: var(--royal-blue); margin: 40px 0 20px 0; font-size: 24px;">12-Month Revenue Projections</h3>
-        <table class="financial-table">
-            <thead>
-                <tr>
-                    <th>Quarter</th>
-                    <th>New AI Revenue</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Q1 (Months 1-3)</td>
-                    <td>$25,000 - $45,000</td>
-                </tr>
-                <tr>
-                    <td>Q2 (Months 4-6)</td>
-                    <td>$45,000 - $80,000</td>
-                </tr>
-                <tr>
-                    <td>Q3 (Months 7-9)</td>
-                    <td>$55,000 - $110,000</td>
-                </tr>
-                <tr>
-                    <td>Q4 (Months 10-12)</td>
-                    <td>$65,000 - $125,000</td>
-                </tr>
-                <tr class="total-row">
-                    <td><strong>YEAR 1 TOTAL</strong></td>
-                    <td><strong>$190,000 - $360,000</strong></td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h3 style="color: var(--royal-blue); margin: 40px 0 20px 0; font-size: 24px;">ROI Analysis</h3>
-        <div class="metrics-grid">
-            <div class="metric-box">
-                <span class="number">$95K-$180K</span>
-                <span class="label">Gross Profit (50% margin)</span>
-            </div>
-            <div class="metric-box">
-                <span class="number">300-400%</span>
-                <span class="label">ROI on initial investment</span>
-            </div>
-            <div class="metric-box">
-                <span class="number">40-60%</span>
-                <span class="label">Profit margins on AI services</span>
-            </div>
-        </div>
-        <div style="background: var(--white-lilac); padding: 20px; border-radius: 10px; margin-top: 20px;">
-            <p><strong style="color: var(--royal-blue);">Note:</strong> AI services offer 40-60% profit margins compared to 25-35% on traditional services, making them highly attractive additions to the portfolio.</p>
-        </div>
-    </div>
-
-    <!-- Risk Assessment & Mitigation -->
+    <!-- Risk Assessment - DEEMPHASIZED -->
     <div id="risks" class="section">
-        <div class="section-header">
+        <div class="section-header-deemphasized">
             <h2>Risk Assessment & Mitigation</h2>
             <p>Comprehensive risk management strategies for successful AI integration</p>
         </div>
@@ -1191,205 +1179,161 @@
 
     <div class="page-break"></div>
 
-    <!-- Success Metrics & KPIs -->
-    <div id="metrics" class="section">
-        <div class="section-header">
-            <h2>Success Metrics & KPIs</h2>
-            <p>Measurable indicators to track progress and optimize performance</p>
-        </div>
-
-        <h3 style="color: var(--royal-blue); margin: 30px 0 20px 0; font-size: 24px;">Leading Indicators (Process Metrics)</h3>
-        <div class="metrics-grid">
-            <div class="metric-box">
-                <span class="number">100%</span>
-                <span class="label">Daily AI tool usage by Month 3</span>
-            </div>
-            <div class="metric-box">
-                <span class="number">20+</span>
-                <span class="label">AI consultations by Month 3</span>
-            </div>
-            <div class="metric-box">
-                <span class="number">2-3x</span>
-                <span class="label">Increase in content output per team member</span>
-            </div>
-        </div>
-        <div class="metric-box" style="margin-top: 20px;">
-            <span class="number">90%+</span>
-            <span class="label">Client satisfaction on AI work</span>
-        </div>
-
-        <h3 style="color: var(--royal-blue); margin: 40px 0 20px 0; font-size: 24px;">Lagging Indicators (Outcome Metrics)</h3>
-        <div class="metrics-grid">
-            <div class="metric-box">
-                <span class="number">$190K-$360K</span>
-                <span class="label">New revenue Year 1</span>
-            </div>
-            <div class="metric-box">
-                <span class="number">&lt;$1,500</span>
-                <span class="label">Client acquisition cost</span>
-            </div>
-            <div class="metric-box">
-                <span class="number">$24,000+</span>
-                <span class="label">Client lifetime value (12-month avg)</span>
-            </div>
-            <div class="metric-box">
-                <span class="number">45-60%</span>
-                <span class="label">Profit margin on AI services</span>
-            </div>
-            <div class="metric-box">
-                <span class="number">85%+</span>
-                <span class="label">Annual retention rate</span>
-            </div>
-            <div class="metric-box">
-                <span class="number">50+</span>
-                <span class="label">Net Promoter Score target</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Competitive Positioning -->
+    <!-- Competitive Positioning - HEAVILY HIGHLIGHTED & EXPANDED -->
     <div id="competitive" class="section">
-        <div class="section-header">
+        <div class="section-header-emphasized">
             <h2>Competitive Positioning</h2>
             <p>Strategic advantages and market opportunity analysis</p>
         </div>
 
         <div class="competitive-box">
-            <h4>Market Opportunity</h4>
+            <h4>Market Opportunity - Significant White Space</h4>
             <ul>
-                <li>Target Market: 12,000+ SMBs in Milwaukee-Racine metro area</li>
-                <li>Competitive Landscape Analysis:</li>
+                <li><strong>Target Market: 12,000+ SMBs in Milwaukee-Racine metro area</strong></li>
+                <li><strong>Competitive Landscape Analysis:</strong></li>
                 <ul style="margin-left: 30px; margin-top: 10px;">
-                    <li>80-85% traditional agencies (no AI capabilities)</li>
-                    <li>10-15% basic AI tool users (no comprehensive strategy)</li>
-                    <li>&lt;5% offer comprehensive AI services ← <strong>DesignsTouch opportunity</strong></li>
+                    <li><strong>80-85% traditional agencies (no AI capabilities)</strong> - Most competitors haven't started AI integration</li>
+                    <li><strong>10-15% basic AI tool users (no comprehensive strategy)</strong> - Limited to point solutions without strategic implementation</li>
+                    <li><strong>&lt;5% offer comprehensive AI services ← DESIGNSTOUCH OPPORTUNITY</strong></li>
                 </ul>
             </ul>
         </div>
 
         <div class="competitive-box">
-            <h4>Unique Advantages</h4>
+            <h4>Unique Advantages - Why DesignsTouch Will Win</h4>
             <ul>
-                <li><strong>Established Trust:</strong> 11+ years in market with 100+ client relationships</li>
-                <li><strong>Design Thinking:</strong> Innovation framework perfect for AI implementation</li>
-                <li><strong>Full-Stack Capabilities:</strong> End-to-end AI integration from strategy to execution</li>
-                <li><strong>Industry Expertise:</strong> Deep knowledge in healthcare, manufacturing, nonprofits, and professional services</li>
+                <li><strong>Established Trust: 11+ years in market with 100+ client relationships</strong> - Existing clients provide low-risk entry point for AI services</li>
+                <li><strong>Design Thinking: Innovation framework perfect for AI implementation</strong> - Proven methodology for solving complex problems</li>
+                <li><strong>Full-Stack Capabilities: End-to-end AI integration from strategy to execution</strong></li>
+                <li><strong>Industry Expertise: Deep knowledge in healthcare, manufacturing, nonprofits, and professional services</strong> - Can create industry-specific AI solutions</li>
+            </ul>
+        </div>
+
+        <div class="expanded-content">
+            <h4>Competitive Moat Strategy</h4>
+            <ul>
+                <li><strong>First-Mover Advantage:</strong> Being first to market in Wisconsin with comprehensive AI services creates lasting brand recognition</li>
+                <li><strong>Client Lock-In:</strong> Once clients integrate AI into their operations, switching costs are high</li>
+                <li><strong>Proprietary Playbooks:</strong> Documented implementation processes become intellectual property</li>
+                <li><strong>Industry Specialization:</strong> Deep expertise in specific verticals (healthcare, manufacturing, nonprofit) is difficult to replicate</li>
+                <li><strong>Case Study Library:</strong> Early success stories create powerful social proof for future clients</li>
+                <li><strong>Team Expertise:</strong> AI-trained team members become valuable assets</li>
             </ul>
         </div>
 
         <div class="recommendation-box">
             <h3>Critical Window for Market Leadership</h3>
             <ul>
-                <li>12-18 month window to establish market leadership before AI services commoditize</li>
-                <li>68% of marketing organizations haven't fully implemented AI = massive opportunity</li>
+                <li><strong>12-18 month window to establish market leadership before AI services commoditize</strong> - This is a time-sensitive opportunity</li>
+                <li><strong>68% of marketing organizations haven't fully implemented AI = massive opportunity</strong> - Huge market of prospects ready to buy</li>
                 <li>96% of enterprises plan to expand AI usage = growing demand</li>
-                <li>First-mover advantage with existing client base provides competitive moat</li>
+                <li><strong>First-mover advantage with existing client base provides competitive moat</strong> - DesignsTouch's established relationships are a strategic asset</li>
             </ul>
         </div>
     </div>
 
-    <!-- Data Sources -->
+    <!-- Data Sources - HIGHLIGHTED -->
     <div class="section">
-        <div class="section-header">
+        <div class="section-header-emphasized">
             <h2>Data Sources</h2>
             <p>Research-backed analysis from leading industry sources</p>
         </div>
 
         <div class="canvas-grid">
-            <div class="canvas-item">
+            <div class="canvas-item-highlighted">
                 <h3>Industry Research</h3>
                 <ul>
-                    <li>McKinsey State of AI Report 2025</li>
-                    <li>PwC AI Business Predictions 2025</li>
-                    <li>Influencer Marketing Hub AI Benchmark 2025</li>
-                    <li>CoSchedule State of AI in Marketing 2025</li>
-                    <li>IBM AI ROI Insights 2025</li>
-                    <li>Morgan Stanley AI Trends 2025</li>
+                    <li><strong>McKinsey State of AI Report 2025</strong></li>
+                    <li><strong>PwC AI Business Predictions 2025</strong></li>
+                    <li><strong>Influencer Marketing Hub AI Benchmark 2025</strong></li>
+                    <li><strong>CoSchedule State of AI in Marketing 2025</strong></li>
+                    <li><strong>IBM AI ROI Insights 2025</strong></li>
+                    <li><strong>Morgan Stanley AI Trends 2025</strong></li>
                 </ul>
             </div>
 
-            <div class="canvas-item">
+            <div class="canvas-item-highlighted">
                 <h3>Market Statistics</h3>
                 <ul>
-                    <li>All About AI Marketing Statistics 2025</li>
-                    <li>SurveyMonkey AI Marketing Statistics</li>
-                    <li>Digital Marketing Institute AI Stats</li>
-                    <li>Warmly AI Agents Statistics</li>
-                    <li>Multimodal Agentic AI Statistics</li>
+                    <li><strong>All About AI Marketing Statistics 2025</strong></li>
+                    <li><strong>SurveyMonkey AI Marketing Statistics</strong></li>
+                    <li><strong>Digital Marketing Institute AI Stats</strong></li>
+                    <li><strong>Warmly AI Agents Statistics</strong></li>
+                    <li><strong>Multimodal Agentic AI Statistics</strong></li>
                 </ul>
             </div>
         </div>
 
         <div class="source-citation">
-            All statistics and projections are based on verified industry research from reputable sources as of October 2025. Market size and growth projections represent conservative estimates based on multiple data sources.
+            <strong>Methodology Note:</strong> All statistics and projections are based on verified industry research from reputable sources as of October 2025. Market size and growth projections represent conservative estimates based on multiple data sources. Revenue projections are based on industry benchmarks and adjusted for DesignsTouch's market position and existing client base.
         </div>
     </div>
 
-    <!-- Next Steps -->
+    <!-- Next Steps - HIGHLIGHTED & EXPANDED -->
     <div id="next-steps" class="section">
-        <div class="section-header">
+        <div class="section-header-emphasized">
             <h2>Next Steps</h2>
-            <p>Immediate actions for the next 30 days</p>
+            <p>Immediate actions for the next 30 days to capitalize on this opportunity</p>
         </div>
 
-        <div class="implementation-steps">
+        <div class="implementation-steps-highlighted">
             <h4 style="font-size: 20px;">Week 1: Leadership Decision</h4>
-            <div class="step">
+            <div class="step-highlighted">
                 <div class="step-number">✓</div>
                 <div class="step-content">
                     <ul style="list-style: none; padding-left: 0;">
-                        <li style="padding: 5px 0;">• Review analysis with executive team</li>
+                        <li style="padding: 5px 0;"><strong>• Review analysis with executive team</strong> - Schedule 2-hour strategic planning session</li>
                         <li style="padding: 5px 0;">• Make go/no-go decision</li>
                         <li style="padding: 5px 0;">• Allocate $20K budget</li>
-                        <li style="padding: 5px 0;">• Assign project champion</li>
+                        <li style="padding: 5px 0;"><strong>• Assign project champion</strong> - Critical for driving implementation</li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="implementation-steps">
+        <div class="implementation-steps-highlighted">
             <h4 style="font-size: 20px;">Week 2: Team Workshop</h4>
-            <div class="step">
+            <div class="step-highlighted">
                 <div class="step-number">✓</div>
                 <div class="step-content">
                     <ul style="list-style: none; padding-left: 0;">
                         <li style="padding: 5px 0;">• All-team AI initiative introduction</li>
-                        <li style="padding: 5px 0;">• Survey current AI comfort levels</li>
-                        <li style="padding: 5px 0;">• Identify 2-3 AI service specialists</li>
-                        <li style="padding: 5px 0;">• Create 90-day project plan</li>
+                        <li style="padding: 5px 0;"><strong>• Survey current AI comfort levels</strong> - Identify team members ready to lead AI initiatives</li>
+                        <li style="padding: 5px 0;"><strong>• Identify 2-3 AI service specialists</strong> - These will be your internal AI champions</li>
+                        <li style="padding: 5px 0;"><strong>• Create 90-day project plan</strong> - Detailed roadmap with weekly milestones</li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="implementation-steps">
+        <div class="implementation-steps-highlighted">
             <h4 style="font-size: 20px;">Weeks 3-4: Tool Evaluation & Pilot Recruitment</h4>
-            <div class="step">
+            <div class="step-highlighted">
                 <div class="step-number">✓</div>
                 <div class="step-content">
                     <ul style="list-style: none; padding-left: 0;">
                         <li style="padding: 5px 0;">• Trial AI content tools (Jasper, Copy.ai, ChatGPT/Claude API)</li>
                         <li style="padding: 5px 0;">• Evaluate chatbot platforms (ManyChat, Drift, Intercom)</li>
-                        <li style="padding: 5px 0;">• Test SEO tools (Surfer SEO, Clearscope)</li>
-                        <li style="padding: 5px 0;">• Select final tech stack</li>
-                        <li style="padding: 5px 0;">• Identify 10 ideal existing clients for pilot program</li>
-                        <li style="padding: 5px 0;">• Goal: 3-5 signed pilots by Month 2 (50% discount offer)</li>
+                        <li style="padding: 5px 0;"><strong>• Test SEO tools (Surfer SEO, Clearscope)</strong> - Critical for Priority 1 service</li>
+                        <li style="padding: 5px 0;"><strong>• Select final tech stack</strong> - Make build vs. buy decisions</li>
+                        <li style="padding: 5px 0;"><strong>• Identify 10 ideal existing clients for pilot program</strong> - Choose clients who will be great case studies</li>
+                        <li style="padding: 5px 0;"><strong>• Goal: 3-5 signed pilots by Month 2 (50% discount offer)</strong> - Early wins build momentum</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Final Recommendation -->
+    <!-- Final Recommendation - HEAVILY HIGHLIGHTED -->
     <div class="recommendation-box" style="margin-top: 50px;">
         <h3>Strategic Recommendation</h3>
         <ul>
-            <li>The AI marketing opportunity represents a once-in-a-decade market shift</li>
-            <li>DesignsTouch has a 12-18 month window to establish market leadership</li>
+            <li><strong>The AI marketing opportunity represents a once-in-a-decade market shift</strong> - Similar to the mobile revolution or social media emergence</li>
+            <li><strong>DesignsTouch has a 12-18 month window to establish market leadership</strong> - First movers will capture disproportionate market share</li>
             <li>Conservative projections show $190K-$360K Year 1 revenue with 300-400% ROI</li>
             <li>Initial investment of ~$20K is modest compared to potential returns</li>
-            <li>Existing client relationships provide low-risk pilot opportunity</li>
-            <li>Recommendation: Proceed with Phase 1 implementation immediately</li>
+            <li><strong>Existing client relationships provide low-risk pilot opportunity</strong> - De-risks the entire initiative</li>
+            <li><strong>Recommendation: Proceed with Phase 1 implementation immediately</strong> - Delaying reduces competitive advantage and market opportunity</li>
         </ul>
     </div>
 
